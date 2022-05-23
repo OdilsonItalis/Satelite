@@ -20,34 +20,6 @@ export const styles = StyleSheet.create({
     paddingLeft: 40,
     paddingRight: 40,
   },
-  headRow: {
-    flexDirection: 'row',
-    width: '100%',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  greeting: {
-    fontSize: 14,
-  },
-  name: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  wordCount: {
-    fontSize: 12,
-  },
-  avatarWrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  avatar: {
-    width: 40,
-    height: 40,
-    borderRadius: 50,
-  },
-  avaName: {
-    fontSize: 12,
-  },
   tempVideo: {
     width: '100%',
     height: 120,
@@ -149,48 +121,5 @@ export const styles = StyleSheet.create({
     color: 'white',
     marginLeft: 5,
     marginRight: 5,
-  },
-  footerBar: {
-    width: '100%',
-    paddingTop: 10,
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingBottom: 10,
-    backgroundColor: '#111a29',
-    borderRadius: 10,
-    marginTop: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-  },
-  tempChart: {
-    backgroundColor: '#26395a',
-    width: 50,
-    height: 50,
-  },
-  graphTitle: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    marginLeft: 5,
-    color: 'white',
-    marginRight: 'auto',
-  },
-  spliter: {
-    position: 'absolute',
-    height: 25,
-    borderLeftColor: 'white',
-    borderLeftWidth: 1,
-  },
-  paysTitle: {
-    fontSize: 16,
-    color: 'white',
-  },
-  comission: {
-    fontSize: 12,
-    color: 'white',
-  },
-  comissionCount: {
-    color: '#8cc580',
   },
 });

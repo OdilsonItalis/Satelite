@@ -21,6 +21,10 @@ const HomeTabStack = () => {
   return (
     <Stack.Navigator screenOptions={stackScreenOptions}>
       <Stack.Screen name={NavigationNames.HomeScreen} component={HomeScreen} />
+      <Stack.Screen
+        name={NavigationNames.InputScreen}
+        component={InputScreen}
+      />
     </Stack.Navigator>
   );
 };
@@ -74,8 +78,8 @@ const PlusTabStack = () => {
   return (
     <Stack.Navigator screenOptions={stackScreenOptions}>
       <Stack.Screen
-        name={NavigationNames.InputScreen}
-        component={InputScreen}
+        name={NavigationNames.OutputScreen}
+        component={OutputScreen}
       />
     </Stack.Navigator>
   );

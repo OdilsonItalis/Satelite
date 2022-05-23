@@ -13,10 +13,16 @@ import {
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 import {View, Text, Image, TextInput} from 'react-native';
-import {styles} from './styles';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
+import {NavigationNames} from '../../navigations/navigationNames';
+import AppHeader from '../../components/AppHeader';
+import FooterBar from '../../components/FooterBar';
+
+import {styles} from './styles';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.screen}>
       <Image
@@ -24,26 +30,14 @@ const HomeScreen = () => {
         source={require('../../assets/images/logo.png')}
       />
       <View style={styles.mainContainer}>
-        <View style={styles.headRow}>
-          <View>
-            <Text style={styles.greeting}>Good Afternoon</Text>
-            <Text style={styles.name}>Avery Davis</Text>
-            <Text style={styles.wordCount}>Word count: 18, 578</Text>
-          </View>
-          <View style={styles.avatarWrapper}>
-            <Image
-              style={styles.avatar}
-              source={require('../../assets/images/avatar.jpg')}
-            />
-            <Text style={styles.avaName}>HailyAI Settings</Text>
-          </View>
-        </View>
+        <AppHeader />
 
         <View style={styles.tempVideo} />
 
         <Text style={styles.skillsTitle}>Featured Playground Skills</Text>
         <View style={styles.skillsRow}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(NavigationNames.InputScreen)}>
             <View style={styles.skillWrapper}>
               <View style={styles.skillIconWrapper}>
                 <FontAwesomeIcon icon={faCameraRetro} color="white" />
@@ -52,7 +46,8 @@ const HomeScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(NavigationNames.InputScreen)}>
             <View style={styles.skillWrapper}>
               <View style={styles.skillIconWrapper}>
                 <FontAwesomeIcon icon={faArrowRight} color="white" />
@@ -61,7 +56,8 @@ const HomeScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(NavigationNames.InputScreen)}>
             <View style={styles.skillWrapper}>
               <View style={styles.skillIconWrapper}>
                 <FontAwesomeIcon icon={faVideo} color="white" />
@@ -70,7 +66,8 @@ const HomeScreen = () => {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate(NavigationNames.InputScreen)}>
             <View style={styles.skillWrapper}>
               <View style={styles.skillIconWrapper}>
                 <FontAwesomeIcon icon={faDownload} color="white" />
@@ -171,21 +168,7 @@ const HomeScreen = () => {
             <Text style={styles.countNumbers}>12</Text>
           </View>
         </View>
-        <View style={styles.footerBar}>
-          <View style={styles.tempChart} />
-          <Text style={styles.graphTitle}>
-            Authorized
-            {'\n'}
-            Reseller
-          </Text>
-          <View style={styles.spliter} />
-          <View>
-            <Text style={styles.paysTitle}>Pays Residuals</Text>
-            <Text style={styles.comission}>
-              <Text style={styles.comissionCount}>30%</Text> Comission
-            </Text>
-          </View>
-        </View>
+        <FooterBar />
       </View>
     </View>
   );
